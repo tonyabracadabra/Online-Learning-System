@@ -17,6 +17,7 @@
     "passport":"*",
     "passport-http":"*",
     "passport-local":"*",
+    "flash":"*",
     "mongodb":"*",
     "mongoose":"*",
     "express-session":"*",
