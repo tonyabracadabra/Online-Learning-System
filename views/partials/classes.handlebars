@@ -1,18 +1,7 @@
-<h4> Latest Classes </h4>
+{{#each classes}}
 <div class="col_4">
-	<h4>Introduction to Machine Learning</h4>
-	<p>Machine learning studies the question "how can we build computer programs that automatically improve their performance through experience?" This includes learning to perform many types of tasks based on many types of experience. For example, it includes robots learning to better navigate based on experience gained by roaming their environments, medical decision aids that learn to predict which therapies work best for which diseases based on data mining of historical health records, and speech recognition systems that lean to better understand your speech based on experience listening to you.</p>
-	<a class="button" href="#">View class</a>
+	<h4>{{title}}<h4>
+	<p>{{description}}<p>
+	<a class="button" href="/classes/{{_id}}/details">View Class</a>
 </div>
-
-<div class="col_4">
-	<h4>Probability Graphical Model</h4>
-	<p>Many of the problems in artificial intelligence, statistics, computer systems, computer vision, natural language processing, and computational biology, among many other fields, can be viewed as the search for a coherent global conclusion from local information. The probabilistic graphical models framework provides an unified view for this wide range of problems, enabling efficient inference, decision-making and learning in problems with a very large number of attributes and huge datasets. This graduate-level course will provide you with a strong foundation for both applying graphical models to complex problems and for addressing core research topics in graphical models.</p>
-	<a class="button" href="#">View class</a>
-</div>
-
-<div class="col_4">
-<h4>Convex Optimizaiton </h4>
-	<p>Nearly every problem in machine learning and statistics can be formulated in terms of the optimization of some function, possibly under some set of constraints. As we obviously cannot solve every problem in machine learning or statistics, this means that we cannot generically solve every optimization problem (at least not efficiently). Fortunately, many problems of interest in statistics and machine learning can be posed as optimization tasks that have special properties—such as convexity, smoothness, sparsity, separability, etc.— permitting standardized, efficient solution techniques.</p>
-	<a class="button" href="#">View class</a>
-</div>
+{{/each}}

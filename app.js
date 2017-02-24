@@ -11,13 +11,17 @@ var expressValidator = require('express-validator');
 var passport = require('passport');
 var flash = require('flash');
 var mongo = require('mongodb');
-var mogoose = require('mongoose');
+var mongoose = require('mongoose');
+mongoose.connect('mongoose ://localhost/elearn');
+var db = mongoose.connection;
+
 // passport local strategy 
 var LocalStrategy = require('passport-local'), Strategy;
 
 // let it be default 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var classes = require('./routes/classes'); 
 
 var app = express();
 
@@ -79,6 +83,8 @@ app.use(function (req, res, next) {
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/classes ', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
